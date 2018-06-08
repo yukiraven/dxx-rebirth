@@ -1419,7 +1419,7 @@ static window_event_result newmenu_draw(window *wind, newmenu *menu)
 	int th = 0, ty, sx, sy;
 	int i;
 
-	if (menu->swidth != SWIDTH || menu->sheight != SHEIGHT || menu->fntscalex != FNTScaleX || menu->fntscalex != FNTScaleY)
+	if (menu->swidth != SWIDTH || menu->sheight != SHEIGHT || menu->fntscalex != FNTScaleX || menu->fntscaley != FNTScaleY)
 	{
 		newmenu_create_structure ( menu );
 		{
@@ -1949,7 +1949,7 @@ static window_event_result listbox_draw(window *, listbox *lb)
 {
 	int i;
 
-	if (lb->swidth != SWIDTH || lb->sheight != SHEIGHT || lb->fntscalex != FNTScaleX || lb->fntscalex != FNTScaleY)
+	if (lb->swidth != SWIDTH || lb->sheight != SHEIGHT || lb->fntscalex != FNTScaleX || lb->fntscaley != FNTScaleY)
 		listbox_create_structure ( lb );
 
 	gr_set_default_canvas();
