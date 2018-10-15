@@ -24,6 +24,7 @@
 #include "digi_mixer_music.h"
 #include "strutil.h"
 #include "u_mem.h"
+#include "config.h"
 #include "console.h"
 
 namespace dcx {
@@ -106,7 +107,7 @@ static ADL_MIDIPlayer *get_adlmidi()
 		if (adlmidi)
 		{
 			adl_switchEmulator(adlmidi, ADLMIDI_EMU_DOSBOX);
-			adl_setNumChips(adlmidi, 6);
+			adl_setNumChips(adlmidi, CGameCfg.ADLMIDI_num_chips);
 			adl_setBank(adlmidi, static_cast<int>(ADL_EmbeddedBank::LBA_4OP));
 			adl_setSoftPanEnabled(adlmidi, 1);
 			current_adlmidi.reset(adlmidi);

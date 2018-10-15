@@ -38,6 +38,9 @@ COPYRIGHT 1993-1999 PARALLAX SOFTWARE CORPORATION.  ALL RIGHTS RESERVED.
 namespace dcx {
 struct CCfg : prohibit_void_ptr<CCfg>
 {
+#if DXX_USE_ADLMIDI
+	static constexpr std::integral_constant<int, 6> ADLMIDI_num_chips{};
+#endif
 	bool VSync;
 	bool Grabinput;
 	bool WindowMode;
